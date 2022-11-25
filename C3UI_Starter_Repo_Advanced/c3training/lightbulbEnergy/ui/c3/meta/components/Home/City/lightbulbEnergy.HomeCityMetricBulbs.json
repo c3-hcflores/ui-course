@@ -1,0 +1,35 @@
+{
+    "type": "UiSdlConnected<UiSdlMetricTile>",
+    "component": {
+      "header": {
+        "title": "SMART BULBS ENERGY USAGE FOR CITY"
+      },
+      "hideTimeHorizonLabel": false,
+      "dataSpec": {
+        "dataType": {
+          "typeName": "City"
+        },
+        "contextVars":
+        {
+            "id": {
+                "type":"UiSdlComponentStateParam",
+                "path":"dataItem.id"
+            }
+        },
+        "historicSparkline": {
+          "color": "BLUE",
+          "name": "Smart Bulbs",
+          "prefix": "Timeframe: ",
+          "timeHorizonLabel": "Twelve (12) Months",
+          "metricName": "EnergyUsageBulb",
+          "evaluateAction": "EVAL",
+          "interval": "MONTH",
+          "timeHorizon": "12MONTHS",
+          "entityId": "${id}",
+          "unit": {
+            "id": "kilowatt_hour"
+          }
+        }
+      }
+    }
+  }

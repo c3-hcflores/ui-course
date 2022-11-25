@@ -1,0 +1,10 @@
+{
+    "id": "SmartMeterElectricMeasurementSource",
+    "name": "SmartMeterElectricMeasurementSource",
+    "source": {
+      "typeName": "SourceSmartMeterElectricMeasurement"
+    },
+    "sourceSystem": {
+      "id": "Legacy"
+    }
+  }

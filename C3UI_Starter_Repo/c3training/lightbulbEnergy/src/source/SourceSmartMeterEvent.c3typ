@@ -1,0 +1,20 @@
+/**
+* SourceSmartMeterEvent.c3typ
+* This type maps the raw data for {@link SmartMeterEvent} information.
+*/
+type SourceSmartMeterEvent mixes Source {
+    // The id of the {@link SmartMeterEvent}
+    id: string
+    
+    // The id of the associated {@link SmartMeter}
+    smartMeter: string
+    
+    // The start datetime of the event
+    start: datetime
+    
+    // The code for the event
+    eventCode: datetime
+
+    // The type of meter for the event
+    meterType: datetime
+}

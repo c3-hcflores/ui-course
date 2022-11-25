@@ -1,0 +1,13 @@
+{
+    "type": "UiSdlConnected<UiSdlLayoutBase>",
+    "component": {
+        "children": [
+            {
+                "id": "lightbulbEnergy.BulbFailures"
+            },
+            {
+                "id": "lightbulbEnergy.BulbChart"
+            }
+        ]
+    }
+}  

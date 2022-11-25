@@ -1,0 +1,13 @@
+{
+    "type": "UiSdlConnected<UiSdlLayoutBase>",
+    "component": {
+        "children": [
+            {
+                "id": "lightbulbEnergy.MeterHighUsage"
+            },
+            {
+                "id": "lightbulbEnergy.MeterChart"
+            }
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "type": "UiSdlConnected<UiSdlNavMenu>",
+    "component": {
+        "itemSections": [
+            {
+                "items": [
+                    {
+                        "id": "Home",
+                        "icon": "HOME",
+                        "title": "Home",
+                        "redirectRoute": {
+                            "urlPath": "/home"
+                        }
+                    },
+                    {
+                        "id": "Bulbs",
+                        "icon": "LIGHTBULB",
+                        "title": "Bulbs",
+                        "redirectRoute": {
+                            "urlPath": "/bulbs"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+} 

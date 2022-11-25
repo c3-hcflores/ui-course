@@ -1,0 +1,9 @@
+/**
+* SmartMeter.c3typ
+* remix of type from lightbulbCore package
+*/
+
+remix type SmartMeter {
+    //Smart Meter events
+    meterEvents: [SmartMeterEvent](smartMeter)
+}

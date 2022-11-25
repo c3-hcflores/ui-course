@@ -1,0 +1,86 @@
+{
+    "type": "UiSdlConnected<UiSdlDataGrid>",
+    "component": {
+        "header": {
+            "title": "Lightbulb Table"
+        },
+        "paginationConfig": {
+            "pagination": false
+        },        
+        "removableColumns": true,
+        "exportable": true,
+        "zebraStripe": true,
+        "filterBar": true,
+        "searchFilter": {
+            "searchBarPlaceHolderText": "Search",
+            "filterButtonText": "Filter",
+            "hideFilterBar": false,
+            "showFilterPopup": false,
+            "cancelButtonText": "Cancel",
+            "applyButtonText": "Apply",
+            "popupFilterHeaderText": "Filters",
+            "hideSearch": false
+        },
+        "dataSpec": {
+            "dataType": {
+                "typeName": "SmartBulb"
+            },
+            "columnFields": [
+                {
+                    "fieldName": "id",
+                    "label": "ID",
+                    "sortable": true,
+                    "searchable": true,
+                    "redirectLink":{
+                        "internal":true,
+                        "href": "/bulb/{{id}}"
+                    }
+                },
+                {
+                    "fieldName": "manufacturer.id",
+                    "label": "Manufacturer",
+                    "sortable": true,
+                    "searchable": true
+                },
+                {
+                    "fieldName": "bulbType",
+                    "label": "Bulb Type",
+                    "sortable": true,
+                    "searchable": true
+                },
+                {
+                    "fieldName": "wattage",
+                    "label": "Wattage",
+                    "filterable": true
+                },
+                {
+                    "fieldName": "currentRiskScore.riskScore",
+                    "label": "currentRiskScore.riskScore",
+                    "sortable": false
+                }
+            ]
+        },
+        "rowActions": [
+            {
+                "type":"UiSdlViewSDLGridRowAction",
+                "name":"View 12 Month Temperature Data",
+                "actionSuffix":"POPUP",
+                "iconSuffix":"grid-layout"
+            }
+        ]
+    },
+    "effectTriggers": [
+        {
+            "trigger":"lightbulbEnergy.BulbsTable.ROW_ACTION_CLICK_POPUP",
+            "effectType":"UiSdlEpicShowUiSdlModal",
+            "payload": {
+                "modal":"lightbulbEnergy.BulbsModal",
+                "applicationStateForPayload": {
+                    "id":"lightbulbEnergy.UiSdlApplicationStateLBE",
+                    "trigger":"lightbulbEnergy.UiSdlApplicationStateLBE.ROW_RECORD_STORE"
+                }
+            },
+            "payloadStrategy":"MERGE"
+        }
+    ]
+}

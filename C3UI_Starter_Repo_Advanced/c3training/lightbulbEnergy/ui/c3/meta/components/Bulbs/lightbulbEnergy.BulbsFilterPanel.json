@@ -1,0 +1,106 @@
+{
+    "type": "UiSdlConnected<UiSdlFilterPanel>",
+    "component": {
+        "title": {
+            "title": "SmartBulb Filter"
+        },
+        "settingsMenu": {
+            "allowSaveAndLoadConfiguration": false,
+            "allowAdvancedFilterMode": false
+        },
+        "dataSpec": {
+            "dataType": {
+                "typeName": "SmartBulb"
+              },
+              "actionName": "fetch",
+              "args": {
+                "spec": {
+                  "include": "this,manufacturer.id,bulbType "
+                }
+            },
+            "fieldSets": [
+                {
+                "title": "SmartBulb",
+                "fields": [
+                        {
+                            "type": "UiSdlFieldSetFilterFieldSetting",
+                            "label": "Manufacturer",
+                            "fieldName": "manufacturer",
+                            "hintText": "Filter by Bulb Manufacturers",
+                            "componentsToFilterMapping": {
+                                "value": {
+                                    "lightbulbEnergy.BulbsHistogram": {
+                                        "SmartBulb": "manufacturer.id"
+                                    },
+                                    "lightbulbEnergy.BulbsTable": {
+                                        "SmartBulb": "manufacturer.id"
+                                    }                                
+                                }
+                            },
+                            "filterElement": {
+                                "type": "UiSdlMultipleSearchFilterField",
+                                "inputElement": {
+                                    "placeholder": "Select a Manufacturer",
+                                    "dataSpec": {
+                                        "dataType": {
+                                            "typeName": "SmartBulb"
+                                        },
+                                        "actionName": "evaluate",
+                                        "args": {
+                                            "spec": {
+                                                "projection": "unique(manufacturer.id)"
+                                            }
+                                        },
+                                        "dataTransforms": [
+                                            "UiSdlTransformEvaluateResultToTuples"
+                                        ],
+                                        "valueField": "cells[0].str",
+                                        "displayField": "cells[0].str"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "UiSdlFieldSetFilterFieldSetting",
+                            "label": "Bulb Type",
+                            "fieldName": "bulbType",
+                            "hintText": "Filter by Bulb Type",
+                            "componentsToFilterMapping": {
+                                "value": {
+                                    "lightbulbEnergy.BulbsHistogram": {
+                                        "SmartBulb": "bulbType"
+                                    },
+                                    "lightbulbEnergy.BulbsTable": {
+                                        "SmartBulb": "bulbType"
+                                    }                                
+                                }
+                            },
+                            "filterElement": {
+                                "type": "UiSdlMultipleSearchFilterField",
+                                "inputElement": {
+                                    "placeholder": "Select a Bulb Type",
+                                    "dataSpec": {
+                                        "dataType": {
+                                            "typeName": "SmartBulb"
+                                        },
+                                        "actionName": "evaluate",
+                                        "args": {
+                                            "spec": {
+                                                "projection": "unique(bulbType)"
+                                            }
+                                        },
+                                        "dataTransforms": [
+                                            "UiSdlTransformEvaluateResultToTuples"
+                                        ],
+                                        "valueField": "cells[0].str",
+                                        "displayField": "cells[0].str"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "type": "UiSdlConnected<UiSdlLayoutNavigation>",
+    "component": {
+        "pageTitle": {
+            "id": "lightbulbEnergy.BulbsTitle"
+        },
+        "navigation": {
+            "id": "lightbulbEnergy.ApplicationNavMenu"
+        },
+        "content": {
+            "id": "lightbulbEnergy.BulbsContent"
+        }
+    }
+}
+

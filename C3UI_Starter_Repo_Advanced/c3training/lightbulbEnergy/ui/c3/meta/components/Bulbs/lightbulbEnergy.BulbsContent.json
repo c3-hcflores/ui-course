@@ -1,0 +1,26 @@
+{
+    "type": "UiSdlConnected<UiSdlLayoutSidePanel>",
+    "applicationStateRef": {
+        "id":"lightbulbEnergy.UiSdlApplicationStateLBE"
+    },
+    "component": {
+        "children": [
+            {
+                "id": "lightbulbEnergy.BulbsHistogram"
+            },
+            {
+                "id": "lightbulbEnergy.BulbsMap"
+            },
+            {
+                "id": "lightbulbEnergy.BulbsTable"
+            },
+            {
+                "id": "lightbulbEnergy.BulbsModal"
+            }
+        ],
+        "leftSidePanel": {
+            "id": "lightbulbEnergy.BulbsFilterPanel"
+        },
+        "rightSidePanel": null
+    }
+}

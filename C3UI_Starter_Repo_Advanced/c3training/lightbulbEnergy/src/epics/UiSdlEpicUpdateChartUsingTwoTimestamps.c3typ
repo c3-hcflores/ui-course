@@ -1,0 +1,12 @@
+/*
+* UiSdlEpicUpdateChartUsingTwoTimestamps.c3typ
+* Epic to pass start and end times from a {@link SmartBulbEvent} record
+* to a chart and chart filter
+*/
+
+@typeScript
+type UiSdlEpicUpdateChartUsingTwoTimestamps extends UiSdlEpic {
+    // Override the epic method
+    @typeScript(env='client')
+    epic: ~
+}

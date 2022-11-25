@@ -1,0 +1,24 @@
+/**
+* SourceSmartBulbEvent.c3typ
+* This type maps the raw data for {@link SmartBulbEvent} information.
+*/
+type SourceSmartBulbEvent mixes Source {
+
+    // The id of the {@link SmartBulbEvent}
+    id: string
+    
+    // The id of the associated {@link SmartBulb}
+    smartBulb: string
+    
+    // The start datetime of the event
+    start: datetime
+    
+    // The end datetime of the event
+    end: datetime
+    
+    // The code for the event
+    eventCode: datetime
+
+    // The type of event
+    eventType: datetime
+}

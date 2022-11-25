@@ -1,0 +1,60 @@
+{
+    "type": "UiSdlConnected<UiSdlDataGrid>",
+    "component": {
+        "header": {
+            "title": "Lightbulb Table"
+        },
+        "paginationConfig": {
+            "pagination": false
+        },        
+        "removableColumns": true,
+        "exportable": true,
+        "zebraStripe": true,
+        "filterBar": true,
+        "searchFilter": {
+            "searchBarPlaceHolderText": "Search",
+            "filterButtonText": "Filter",
+            "hideFilterBar": false,
+            "showFilterPopup": false,
+            "cancelButtonText": "Cancel",
+            "applyButtonText": "Apply",
+            "popupFilterHeaderText": "Filters",
+            "hideSearch": false
+        },
+        "dataSpec": {
+            "dataType": {
+                "typeName": "SmartBulb"
+            },
+            "columnFields": [
+                {
+                    "fieldName": "id",
+                    "label": "ID",
+                    "sortable": true,
+                    "searchable": true
+                },
+                {
+                    "fieldName": "manufacturer.id",
+                    "label": "Manufacturer",
+                    "sortable": true,
+                    "searchable": true
+                },
+                {
+                    "fieldName": "bulbType",
+                    "label": "Bulb Type",
+                    "sortable": true,
+                    "searchable": true
+                },
+                {
+                    "fieldName": "wattage",
+                    "label": "Wattage",
+                    "filterable": true
+                },
+                {
+                    "fieldName": "currentRiskScore.riskScore",
+                    "label": "currentRiskScore.riskScore",
+                    "sortable": false
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "UiSdlConnected<UiSdlTabPanel>",
+    "component": {
+      "title": {
+        "text": "Summary Metrics"
+      },
+      "autoLoadData": true,
+      "activeTab": "lightbulbEnergy.HomeCitySummaryTable",
+      "tabComponents": [
+        {
+          "id": "lightbulbEnergy.HomeCitySummaryTable",
+          "title": "City"
+        }
+      ]
+    }
+}
+  

@@ -1,0 +1,48 @@
+{
+  "type": "UiSdlConnected<UiSdlTimeseriesLineBarChart>",
+  "component": {
+    "header": {
+      "title": "Smart Meter Power"
+    },
+    "zoomEnabled": true,
+    "dataZoom": true,
+    "dataSelection": true,
+    "xAxis": {
+      "name": "",
+      "interval": "DAY",
+      "startDate": "LAST_MONTH"
+    },
+    "yAxis": {
+      "name": "Power",
+      "units": true
+    },
+    "dataSpec": {
+      "dataType": {
+        "typeName": "SmartMeterElectric"
+      },
+      "contextVars": {
+        "id": {
+          "type": "UiSdlPageParam",
+          "path":"myid"
+        }
+      },
+      "yAxisFields": [
+        {
+          "visualizationType": {
+            "type": "UiSdlLineBarChartLineVisualization",
+            "lineStyle": "Solid",
+            "itemStyle": "Circle"
+          },
+          "entityId": "${id}",
+          "metricName": "AveragePowerMeter",
+          "bindings": {
+            "value": {
+              "origin": 0,
+              "bound": 100
+            }
+          }
+        }
+      ]
+    }
+  }
+}

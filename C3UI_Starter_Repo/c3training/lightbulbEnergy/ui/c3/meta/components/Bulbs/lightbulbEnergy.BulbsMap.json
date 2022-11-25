@@ -1,0 +1,34 @@
+{
+    "type": "UiSdlConnected<UiSdlMap>",
+    "component": {   
+        "defaultMarkerShape": "CIRCLE",
+        "defaultMarkerColor": "#06a7e0",
+        "mapStyle": "ROAD",
+        "title": "Building Map",
+        "dataSpec": {
+            "dataType": {
+                "typeName": "Building"
+            },
+            "latitude": {
+                "fieldName": "latitude",
+                "label": "latitude",
+                "name": "latitude"
+            },
+            "longitude": {
+                "fieldName": "longitude",
+                "label": "longitude",
+                "name": "longitude"
+            },
+            "tooltipHeader": {
+                "fieldName": "id",
+                "label": "id",
+                "name": "id"
+            },
+            "tooltipSubHeader": {
+                "fieldName": "city.name",
+                "label": "city.name",
+                "name": "city.name"
+            }
+        }
+    }
+}

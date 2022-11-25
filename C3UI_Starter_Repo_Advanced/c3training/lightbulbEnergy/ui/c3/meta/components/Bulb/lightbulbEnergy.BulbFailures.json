@@ -1,0 +1,62 @@
+{
+  "type": "UiSdlConnected<UiSdlDataGrid>",
+  "component": {
+    "paginationConfig": {
+      "pageSize": 5,
+      "pagination": true
+    },
+    "reorderableColumns": true,
+    "filterBar": false,
+    "dataSpec": {
+      "dataType": {
+        "typeName": "SmartBulbEvent"
+      },
+      "contextVars": {
+        "smartBulb.id": {
+          "type": "UiSdlPageParam",
+          "path":"myid"
+        }
+      },
+      "columnFields": [
+        {
+          "fieldName": "smartBulb.id",
+          "label": "Smart Bulb ID"
+        },
+        {
+          "fieldName": "smartBulb.manufacturer.id",
+          "label": "Manufacturer"
+        },
+        {
+            "fieldName": "eventType",
+            "label": "Event Type"
+        },
+        {
+            "fieldName": "eventCode",
+            "label": "Event Code"
+        },
+        {
+            "fieldName": "start",
+            "label": "Start",
+            "sortable": true,
+            "defaultSortField": {
+              "sortOrder": "ascending"
+            }
+        },
+        {
+            "fieldName": "end",
+            "label": "End"
+        }
+      ]
+    }
+  },
+  "effectTriggers": [
+    {
+      "trigger":"lightbulbEnergy.BulbFailures.ROW_CLICK",
+      "effectType": "UiSdlEpicUpdateChartUsingTwoTimestamps",
+      "payload": {
+        "chart": "lightbulbEnergy.BulbChart"
+      },
+      "payloadStrategy":"MERGE"
+    }
+  ]
+}

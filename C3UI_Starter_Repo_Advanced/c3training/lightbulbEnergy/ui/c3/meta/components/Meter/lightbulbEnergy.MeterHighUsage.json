@@ -1,0 +1,57 @@
+{
+    "type": "UiSdlConnected<UiSdlDataGrid>",
+    "component": {
+      "paginationConfig": {
+        "pageSize": 5,
+        "pagination": true
+      },
+    "reorderableColumns": true,
+      "dataSpec": {
+        "dataType": {
+          "typeName": "SmartMeterEvent"
+        },
+        "contextVars": {
+          "smartMeter.id": {
+            "type": "UiSdlPageParam",
+            "path":"myid"
+          }
+        },
+        "columnFields": [
+        {
+          "fieldName": "smartMeter.id",
+          "label": "Smart Meter ID",
+          "searchable": false
+        },
+        {
+          "fieldName": "meterType",
+          "label": "Meter Type",
+          "searchable": true
+        },
+        {
+          "fieldName": "eventCode",
+          "label": "Event Code",
+          "searchable": false
+        },
+        {
+          "fieldName": "start",
+          "label": "Start",
+          "searchable": false,
+          "sortable": true,
+          "defaultSortField": {
+            "sortOrder": "descending"
+          }
+        }
+        ]
+      }
+    },
+    "effectTriggers": [
+      {
+        "trigger":"lightbulbEnergy.MeterHighUsage.ROW_CLICK",
+        "effectType": "UiSdlEpicUpdateChartUsing2daysRange",
+        "payload": {
+          "chart": "lightbulbEnergy.MeterChart"
+        },
+        "payloadStrategy":"MERGE"
+      }
+    ]
+}

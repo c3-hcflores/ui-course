@@ -1,0 +1,42 @@
+{
+  "type": "UiSdlConnected<UiSdlDataGrid>",
+  "component": {
+    "paginationConfig": {
+      "pageSize": 5,
+      "pagination": true
+    },
+    "reorderableColumns": false,
+    "filterBar": false,
+    "dataSpec": {
+      "dataType": {
+        "typeName": "SmartBulbEvent"
+      },
+      "columnFields": [
+        {
+          "fieldName": "smartBulb.id",
+          "label": "Smart Bulb ID"
+        },
+        {
+          "fieldName": "smartBulb.manufacturer.id",
+          "label": "Manufacturer"
+        },
+        {
+            "fieldName": "eventType",
+            "label": "Event Type"
+        },
+        {
+            "fieldName": "eventCode",
+            "label": "Event Code"
+        },
+        {
+            "fieldName": "start",
+            "label": "Start"
+        },
+        {
+            "fieldName": "end",
+            "label": "End"
+        }
+      ]
+    }
+  }
+}

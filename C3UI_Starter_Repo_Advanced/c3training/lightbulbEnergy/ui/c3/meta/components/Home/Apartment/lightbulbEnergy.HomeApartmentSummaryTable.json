@@ -1,0 +1,53 @@
+{
+    "type": "UiSdlConnected<UiSdlDataGrid>",
+    "component": {
+    "paginationConfig": {
+      "pageSize": 10,
+      "pagination": true
+    },
+    "detailComponentId": "lightbulbEnergy.HomeApartmentMetricContainer",
+    "reorderableColumns": false,
+    "filterBar": true,
+    "searchFilter": {
+      "searchBarPlaceHolderText": "Search",
+      "filterButtonText": "Filter",
+      "hideFilterBar": false,
+      "showFilterPopup": false,
+      "cancelButtonText": "Cancel",
+      "applyButtonText": "Apply",
+      "popupFilterHeaderText": "Filters",
+      "hideSearch": false
+  },
+    "dataSpec": {
+      "dataType": {
+        "typeName": "Apartment"
+      },
+      "columnFields": [
+        {
+          "fieldName": "id",
+          "label": "Apartment",
+          "searchable": "true"
+        },
+        {
+            "fieldName": "building.id",
+            "label": "Building",
+            "searchable": "true"
+        },
+        {
+            "fieldName": "building.city.id",
+            "label": "City",
+            "searchable": "true"
+        },
+        {
+            "fieldName": "smartMeterElectric.id",
+            "label": "Electric Smart Meter",
+            "searchable": "true",
+            "redirectLink":{
+              "internal":true,
+              "href": "/meter/{{smartMeterElectric.id}}"
+            }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+/**
+* SmartBulb.c3typ
+* remix of type from lightbulbCore package
+*/
+
+remix type SmartBulb {
+    //Smart Bulb events
+    bulbEvents: [SmartBulbEvent](smartBulb)
+}

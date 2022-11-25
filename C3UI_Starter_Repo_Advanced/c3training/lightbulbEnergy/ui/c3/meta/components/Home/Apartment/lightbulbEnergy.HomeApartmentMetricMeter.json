@@ -1,0 +1,34 @@
+{
+    "type": "UiSdlConnected<UiSdlMetricTile>",
+    "component": {
+      "header": {
+        "title": "SMART METER ENERGY USAGE FOR APARTMENT"
+      },
+      "hideTimeHorizonLabel": false,
+      "dataSpec": {
+        "dataType": {
+          "typeName": "Apartment"
+        },
+        "contextVars": {
+            "id" : {
+              "type": "UiSdlComponentStateParam",
+              "path": "dataItem.id"
+            }
+        },
+        "historicSparkline": {
+          "color": "GREEN",
+          "name": "Smart Meter",
+          "prefix": "Timeframe: ",
+          "timeHorizonLabel": "Twelve (12) Months",
+          "metricName": "EnergyUsageMeter",
+          "evaluateAction": "EVAL",
+          "interval": "MONTH",
+          "timeHorizon": "12MONTHS",
+          "entityId": "${id}",
+          "unit": {
+            "id": "kilowatt_hour"
+          }
+        }
+      }
+    }
+  }

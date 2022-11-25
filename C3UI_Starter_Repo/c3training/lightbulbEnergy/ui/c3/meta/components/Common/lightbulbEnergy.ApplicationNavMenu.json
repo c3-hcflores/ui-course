@@ -1,0 +1,19 @@
+{
+    "type": "UiSdlConnected<UiSdlNavMenu>",
+    "component": {
+        "itemSections": [
+            {
+                "items": [
+                    {
+                        "id": "Bulbs",
+                        "icon": "LIGHTBULB",
+                        "title": "Bulbs",
+                        "redirectRoute": {
+                            "urlPath": "/bulbs"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

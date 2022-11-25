@@ -1,0 +1,21 @@
+/**
+* TransformSourceSmartMeterEventToSmartMeterEvent.c3typ
+* Transforms {@link SourceSmartMeterEvent} to {@link SmartMeterEvent}
+*/
+
+type TransformSourceSmartMeterEventToSmartMeterEvent mixes SmartMeterEvent transforms SourceSmartMeterEvent {
+    // The id of the {@link SmartMeterEvent}
+    id: ~ expression  "id"
+
+    // The id of the associated {@link SmartMeter}
+    smartMeter: ~ expression {id : "smartMeter"}
+
+    // The start datetime of the event
+    start: ~ expression "start"
+
+    // The code for the event
+    eventCode: ~ expression "eventCode" 
+
+    // The type of meter for the event
+    meterType: ~ expression "meterType" 
+}

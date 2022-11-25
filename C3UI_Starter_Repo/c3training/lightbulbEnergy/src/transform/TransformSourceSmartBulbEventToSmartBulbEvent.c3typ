@@ -1,0 +1,24 @@
+/**
+* TransformSourceSmartBulbEventToSmartBulbEvent.c3typ
+* Transforms {@link SourceSmartBulbEvent} to {@link SmartBulbEvent}
+*/
+
+type TransformSourceSmartBulbEventToSmartBulbEvent mixes SmartBulbEvent transforms SourceSmartBulbEvent {
+    // The id of the {@link SmartBulbEvent}
+    id: ~ expression  "id"
+
+    // The id of the associated {@link SmartBulb}
+    smartBulb: ~ expression {id : "smartBulb"}
+
+    // The start datetime of the event
+    start: ~ expression "start"
+
+    // The end datetime of the event
+    end: ~ expression "end"
+
+    // The code for the event
+    eventCode: ~ expression "eventCode" 
+
+    // The type of Bulb for the event
+    eventType: ~ expression "eventType" 
+}

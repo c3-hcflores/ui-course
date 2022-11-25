@@ -1,0 +1,15 @@
+{
+  "type": "UiSdlConnected<UiSdlContainer>",
+  "component": {
+    "title": "Apartment Summary Metrics",
+    "orientation": "HORIZONTAL",
+    "children": [
+      {
+        "id": "lightbulbEnergy.HomeApartmentMetricMeter"
+      },
+      {
+        "id": "lightbulbEnergy.HomeApartmentMetricBulbs"
+      }
+    ]
+  }
+}

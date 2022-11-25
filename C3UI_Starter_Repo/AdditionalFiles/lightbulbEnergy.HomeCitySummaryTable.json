@@ -1,0 +1,26 @@
+{
+  "type": "UiSdlConnected<UiSdlDataGrid>",
+  "component": {
+  "paginationConfig": {
+    "pageSize": 10,
+    "pagination": true
+  },
+  "reorderableColumns": false,
+  "filterBar": false,
+  "dataSpec": {
+    "dataType": {
+      "typeName": "City"
+    },
+    "columnFields": [
+      {
+        "fieldName": "name",
+        "label": "City"
+      },
+      {
+        "fieldName": "id",
+        "label": "Abbreviation"
+      }
+      ]
+    }
+  }
+}

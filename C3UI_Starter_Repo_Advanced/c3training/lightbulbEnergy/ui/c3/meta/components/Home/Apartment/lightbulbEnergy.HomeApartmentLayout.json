@@ -1,0 +1,14 @@
+{
+    "type": "UiSdlConnected<UiSdlLayoutSidePanel>",
+    "component": {
+        "children": [
+            {
+                "id": "lightbulbEnergy.HomeApartmentSummaryTable"
+            }
+        ],
+        "leftSidePanel": {
+            "id": "lightbulbEnergy.HomeApartmentFilterPanel"
+        },
+        "rightSidePanel": null
+    }
+}

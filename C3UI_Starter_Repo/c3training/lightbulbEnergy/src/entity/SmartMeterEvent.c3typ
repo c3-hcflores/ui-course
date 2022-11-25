@@ -1,0 +1,17 @@
+/*
+* SmartMeterEvent.c3typ
+* Results of SmartMeterElectricHighUsage Analytic
+*/
+
+@db(datastore='cassandra', 
+  partitionKeyField='smartMeter',  
+  persistenceOrder='start',  
+  persistDuplicates=false, 
+  compactType=true,   
+  shortId=true)
+entity type SmartMeterEvent schema name 'SMRT_MTR_EVNT' {
+  smartMeter: !SmartMeter
+  start: !datetime
+  eventCode: !string
+  meterType: !string enum('ELECTRIC', 'GAS', 'WATER')
+}

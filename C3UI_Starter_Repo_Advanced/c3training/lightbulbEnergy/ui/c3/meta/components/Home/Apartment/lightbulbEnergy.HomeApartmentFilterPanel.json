@@ -1,0 +1,100 @@
+{
+    "type": "UiSdlConnected<UiSdlFilterPanel>",
+    "component": {
+        "title": {
+            "title": "Apartment Filters"
+        },
+        "settingsMenu": {
+            "allowSaveAndLoadConfiguration": false,
+            "allowAdvancedFilterMode": false
+        },
+        "dataSpec": {
+            "dataType": {
+                "typeName": "Apartment"
+              },
+              "actionName": "fetch",
+              "args": {
+                "spec": {
+                  "include": "this,building.id,building.city.id"
+                }
+            },
+            "fieldSets": [
+                {
+                "title": "Apartment",
+                "fields": [
+                        {
+                            "type": "UiSdlFieldSetFilterFieldSetting",
+                            "label": "Building",
+                            "fieldName": "building",
+                            "hintText": "Filter by Building",
+                            "componentsToFilterMapping": {
+                                "value": {
+                                    "lightbulbEnergy.HomeApartmentSummaryTable": {
+                                        "Apartment": "building.id"
+                                    }                        
+                                }
+                            },
+                            "filterElement": {
+                                "type": "UiSdlMultipleSearchFilterField",
+                                "inputElement": {
+                                    "placeholder": "Select a Building",
+                                    "dataSpec": {
+                                        "dataType": {
+                                            "typeName": "Apartment"
+                                        },
+                                        "actionName": "evaluate",
+                                        "args": {
+                                            "spec": {
+                                                "projection": "unique(building.id)"
+                                            }
+                                        },
+                                        "dataTransforms": [
+                                            "UiSdlTransformEvaluateResultToTuples"
+                                        ],
+                                        "valueField": "cells[0].str",
+                                        "displayField": "cells[0].str"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "UiSdlFieldSetFilterFieldSetting",
+                            "label": "City",
+                            "fieldName": "city",
+                            "hintText": "Filter by City",
+                            "componentsToFilterMapping": {
+                                "value": {
+                                    "lightbulbEnergy.HomeApartmentSummaryTable": {
+                                        "Apartment": "building.city.id"
+                                    }                         
+                                }
+                            },
+                            "filterElement": {
+                                "type": "UiSdlMultipleSearchFilterField",
+                                "inputElement": {
+                                    "placeholder": "Select a City",
+                                    "dataSpec": {
+                                        "dataType": {
+                                            "typeName": "Apartment"
+                                        },
+                                        "actionName": "evaluate",
+                                        "args": {
+                                            "spec": {
+                                                "projection": "unique(building.city.id)"
+                                            }
+                                        },
+                                        "dataTransforms": [
+                                            "UiSdlTransformEvaluateResultToTuples"
+                                        ],
+                                        "valueField": "cells[0].str",
+                                        "displayField": "cells[0].str"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

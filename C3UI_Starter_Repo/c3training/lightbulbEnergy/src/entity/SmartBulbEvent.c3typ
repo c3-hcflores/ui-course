@@ -1,0 +1,18 @@
+/*
+* SmartBulbEvent.c3typ
+* Results of SmartBulbOverheatAlert Analytic
+*/
+
+@db(datastore='cassandra', 
+  partitionKeyField='smartBulb',  
+  persistenceOrder='start',  
+  persistDuplicates=false, 
+  compactType=true,   
+  shortId=true)
+entity type SmartBulbEvent schema name 'SMRT_BLB_EVNT' {
+  smartBulb: !SmartBulb
+  start: !datetime
+  end: datetime
+  eventCode: !string
+  eventType: !string
+}

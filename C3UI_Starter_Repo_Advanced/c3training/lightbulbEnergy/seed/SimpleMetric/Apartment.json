@@ -1,0 +1,16 @@
+[
+    {
+        "id": "AveragePowerBulb_Apartment",
+        "name": "AveragePowerBulb",
+        "srcType": "Apartment",
+        "path": "fixtureHistory.from.bulbHistory.from.bulbMeasurements",
+        "expression": "sum(avg(normalized.data.power))"
+    },
+    {
+        "id": "AveragePowerMeter_Apartment",
+        "name": "AveragePowerMeter",
+        "srcType": "Apartment",
+        "path": "smartMeterElectric.meterMeasurementSeries",
+        "expression": "sum(avg(normalized.data.power))"
+    }
+]

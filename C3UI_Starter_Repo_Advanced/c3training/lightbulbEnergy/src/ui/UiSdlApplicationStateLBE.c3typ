@@ -1,0 +1,21 @@
+@typeScript
+type UiSdlApplicationStateLBE mixes UiSdlApplicationState {
+/*
+* Listens for actions of type 'ROW_RECORD_STORE'
+*/
+   @typeScript(env="client")
+   @uiSdlReducer(actionType='ROW_RECORD_STORE')
+   rowRecordStoreReducer: private inline function(state: !UiSdlReduxState, action: UiSdlReduxAction): UiSdlReduxState
+
+   @uiSdlActionCreator(actionType='ROW_RECORD_STORE')
+   @typeScript(env="client")
+   storeRowRecordAction: function(id: string, obj: json): UiSdlReduxAction
+   
+   // @typeScript(env="client")
+   // @uiSdlReducer(actionType='APPLICATION_ID_RECORD_STORE')
+   // apartmentIdStoreReducer: private inline function(state: !UiSdlReduxState, action: UiSdlReduxAction): UiSdlReduxState
+
+   // @uiSdlActionCreator(actionType='APPLICATION_ID_RECORD_STORE')
+   // @typeScript(env="client")
+   // apartmentIdRecordAction: function(id: string, obj: json): UiSdlReduxAction
+}

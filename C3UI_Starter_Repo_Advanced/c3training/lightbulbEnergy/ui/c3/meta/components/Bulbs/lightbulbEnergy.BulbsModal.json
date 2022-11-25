@@ -1,0 +1,18 @@
+{
+    "type": "UiSdlConnected<UiSdlModal>",
+    "component": {
+      "size":"FULLSREEN",
+      "header": {
+        "text": "Average Temperature"
+      },
+      "modalType": {
+        "type": "UiSdlOneButtonModal",
+        "primaryButtonLabel": "Close"
+      },
+      "children": [
+        {
+          "id": "lightbulbEnergy.BulbsModalTemperaturePlot"
+        }
+      ]
+    }
+  }

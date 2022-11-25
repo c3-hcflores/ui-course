@@ -1,0 +1,45 @@
+{
+    "type": "UiSdlConnected<UiSdlTimeseriesLineBarChart>",
+    "component": {
+      "header": {
+        "title": "Bulb Average Temperature"
+      },
+      "legend": {
+        "legendPosition":"BELOW_CHART"
+      },
+      "zoomEnabled": true,
+      "dataZoom": true,
+      "dataSelection": true,
+      "xAxis": {
+        "name": "",
+        "interval": "MONTH",
+        "startDate": "LAST_YEAR"
+      },
+      "yAxis": {
+        "name": "Temperature",
+        "units": true
+      },
+      "dataSpec": {
+        "dataType": {
+          "typeName": "SmartBulb"
+        },
+        "yAxisFields": [
+          {
+            "visualizationType": {
+              "type": "UiSdlLineBarChartLineVisualization",
+              "lineStyle": "Solid",
+              "itemStyle": "Circle"
+            },
+            "entityId": "SMBLB1",
+            "metricName": "AverageTemperature",
+            "bindings": {
+              "value": {
+                "origin": 0,
+                "bound": 100
+              }
+            }
+          }
+        ]
+      }
+    }
+  }

@@ -1,0 +1,31 @@
+{
+    "type": "UiSdlConnected<UiSdlHistogram>",
+    "component": { 
+        "header": {
+            "title": "Risk Score Distribution"
+        },         
+        "tooltipValuesDecimalPrecision": "0",
+        "xAxis": {
+            "type": "UiSdlHistogramXAxisConfig",
+            "numBins": 15,
+            "decimalPrecision": 2
+        },
+        "yAxis": {
+            "type": "UiSdlHistogramYAxisConfig",
+            "precision": 0
+        },
+        "dataSpec": {
+            "dataType": {
+                "typeName": "SmartBulb"
+            },
+            "yAxisFields": [
+                {
+                    "color": "#06a7e0",
+                    "fieldName": "currentRiskScore.riskScore",
+                    "label": "currentRiskScore.riskScore",
+                    "legendLabel": "# of Bulbs in Range"
+                }
+            ]
+        }
+    }
+}
