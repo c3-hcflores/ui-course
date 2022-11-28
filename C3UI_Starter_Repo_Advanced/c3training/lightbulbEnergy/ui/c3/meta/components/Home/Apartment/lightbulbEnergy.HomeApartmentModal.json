@@ -1,0 +1,13 @@
+{
+    "type": "UiSdlConnected<UiSdlModal>",
+    "component": {
+      "size":"FULLSREEN",
+      "header": {
+        "text": "Smart Meter Power"
+      },
+      "modalType": {
+        "type": "UiSdlOneButtonModal",
+        "primaryButtonLabel": "Close"
+      }
+    }
+  }

@@ -48,6 +48,14 @@
             }
         }
       ]
-    }
+    },
+    "rowActions": [
+        {
+            "type":"UiSdlViewSDLGridRowAction",
+            "name":"All bulbs from a apartment",
+            "actionSuffix":"POPUP",
+            "iconSuffix":"grid-layout"
+        }
+    ]
   }
 }

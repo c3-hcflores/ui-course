@@ -4,6 +4,9 @@
         "children": [
             {
                 "id": "lightbulbEnergy.HomeApartmentSummaryTable"
+            },
+            {
+                "id": "lightbulbEnergy.HomeApartmentModal"
             }
         ],
         "leftSidePanel": {

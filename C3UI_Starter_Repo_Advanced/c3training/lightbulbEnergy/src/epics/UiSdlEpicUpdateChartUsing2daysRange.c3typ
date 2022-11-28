@@ -1,6 +1,6 @@
 /*
 * UiSdlEpicUpdateChartUsing2daysRange.c3typ
-* Epic to get the 2 days back and 2 days forward from the current event type from a {@link SmartMeterEvent} record
+* Epic to get the 2 days back and 2 days forward from the current event type from a {@link SmartBulb} record
 * to a chart and chart filter
 */
 
