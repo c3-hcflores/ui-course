@@ -3,11 +3,16 @@
     "component": {
       "size":"FULLSREEN",
       "header": {
-        "text": "Smart Meter Power"
+        "text": "All bulb from this apartment"
       },
       "modalType": {
         "type": "UiSdlOneButtonModal",
         "primaryButtonLabel": "Close"
-      }
+      },
+      "children": [
+        {
+          "id": "lightbulbEnergy.HomeApartmentTableModel"
+        }
+      ]
     }
   }

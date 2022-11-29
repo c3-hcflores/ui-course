@@ -15,17 +15,17 @@ export function storeRowRecordAction(id, obj) {
     }
 }
 
-// export function applicationIdStoreReducer(state, action) {
-//   const appStateId = action.payload.componentId;
-//   return setConfigInApplicationState(appStateId, state, ['applicationIdRecord'], action.payload.obj.id);
-// }
+export function apartmentIdStoreReducer(state, action) {
+  const appStateId = action.payload.componentId;
+  return setConfigInApplicationState(appStateId, state, ['applicationIdRecord'], action.payload.obj.id);
+}
 
-// export function applicationIdRecordAction(id, obj) {
-//     return {
-//       type: id + '.APPLICATION_ID_RECORD_STORE',
-//       payload: {
-//         componentId: id,
-//         obj: obj
-//       }
-//     }
-// }
+export function apartmentIdRecordAction(id, obj) {
+    return {
+      type: id + '.APPLICATION_ID_RECORD_STORE',
+      payload: {
+        componentId: id,
+        obj: obj
+      }
+    }
+}

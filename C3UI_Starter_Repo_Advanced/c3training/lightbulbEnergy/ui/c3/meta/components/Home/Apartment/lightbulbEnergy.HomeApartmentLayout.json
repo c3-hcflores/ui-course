@@ -1,5 +1,8 @@
 {
     "type": "UiSdlConnected<UiSdlLayoutSidePanel>",
+    "applicationStateRef": {
+        "id":"lightbulbEnergy.UiSdlApplicationStateLBE"
+    },
     "component": {
         "children": [
             {

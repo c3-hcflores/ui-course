@@ -57,5 +57,18 @@
             "iconSuffix":"grid-layout"
         }
     ]
-  }
+  }, "effectTriggers": [
+    {
+        "trigger":"lightbulbEnergy.HomeApartmentSummaryTable.ROW_ACTION_CLICK_POPUP",
+        "effectType":"UiSdlEpicShowUiSdlModal",
+        "payload": {
+            "modal":"lightbulbEnergy.HomeApartmentModal",
+            "applicationStateForPayload": {
+                "id":"lightbulbEnergy.UiSdlApplicationStateLBE",
+                "trigger":"lightbulbEnergy.UiSdlApplicationStateLBE.APPLICATION_ID_RECORD_STORE"
+            }
+        },
+        "payloadStrategy":"MERGE"
+    }
+  ]
 }

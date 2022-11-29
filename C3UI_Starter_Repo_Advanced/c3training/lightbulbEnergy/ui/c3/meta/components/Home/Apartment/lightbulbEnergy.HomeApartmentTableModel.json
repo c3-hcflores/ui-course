@@ -1,0 +1,33 @@
+{
+    "type": "UiSdlConnected<UiSdlDataGrid>",
+    "component": {
+      "paginationConfig": {
+        "pageSize": 10,
+        "pagination": true
+      },
+    "reorderableColumns": true,
+      "dataSpec": {
+        "dataType": {
+          "typeName": "SmartBulb"
+        },
+        "contextVars": {
+          "currentFixture.currentApartment.id": {
+            "type": "UiSdlApplicationStateValueParam",
+            "id": "lightbulbEnergy.UiSdlApplicationStateLBE",
+            "path": "applicationIdRecord"
+          }
+        },
+        "columnFields": [
+        {
+            "fieldName": "id",
+            "label": "Bulb Id",
+            "searchable": false,
+            "redirectLink":{
+              "internal":true,
+              "href": "/bulb/{{id}}"
+            }
+        }
+        ]
+      }
+    }
+}
