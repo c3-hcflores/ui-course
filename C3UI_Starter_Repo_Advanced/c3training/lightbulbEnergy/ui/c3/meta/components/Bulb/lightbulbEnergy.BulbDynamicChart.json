@@ -1,0 +1,20 @@
+{
+    "type": "UiSdlConnected<UiSdlDynamicComponentRenderer>",
+    "component": {
+      "dataSpec": {
+        "contextVars": {
+          "id": {
+            "type": "UiSdlPageParam",
+            "path":"myid"
+          }
+        },
+        "dataType": {
+          "typeName": "BulbDynamicComponentHelper"
+        },
+        "actionName": "getDynamicChartConfig",
+        "actionArgs": {
+          "bulbId": "${id}"
+        }
+      }
+    }
+  }

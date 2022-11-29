@@ -1,0 +1,4 @@
+type BulbDynamicComponentHelper {
+    getDynamicChartConfig: function(bulbId: string): json js server
+    generateChartConfig: function(dataItem: string, metadataId: string): json js server
+}

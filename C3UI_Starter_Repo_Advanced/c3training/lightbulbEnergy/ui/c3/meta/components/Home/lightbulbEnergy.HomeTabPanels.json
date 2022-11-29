@@ -12,9 +12,13 @@
           "title": "City"
         },
         {
-            "id": "lightbulbEnergy.HomeApartmentLayout",
-            "title": "Apartment"
-          }
+          "id": "lightbulbEnergy.HomeApartmentLayout",
+          "title": "Apartment"
+        },
+        {
+          "id": "lightbulbEnergy.HomeBuildingLayout",
+          "title": "Building"
+        }
       ]
     }
 }
