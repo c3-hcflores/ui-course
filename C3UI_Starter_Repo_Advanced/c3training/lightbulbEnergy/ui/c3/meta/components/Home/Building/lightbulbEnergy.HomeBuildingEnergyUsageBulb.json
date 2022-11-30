@@ -1,0 +1,34 @@
+{
+    "type": "UiSdlConnected<UiSdlMetricTile>",
+    "component": {
+      "header": {
+        "title": "SMART METER ENERGY USAGE FOR BUILDING"
+      },
+      "hideTimeHorizonLabel": false,
+      "dataSpec": {
+        "dataType": {
+          "typeName": "Building"
+        },
+        "contextVars": {
+            "id" : {
+              "type": "UiSdlComponentStateParam",
+              "path": "dataItem.id"
+            }
+        },
+        "historicSparkline": {
+          "color": "BLUE",
+          "name": "Smart Bulb",
+          "prefix": "Timeframe: ",
+          "timeHorizonLabel": "Twelve (24) Months",
+          "metricName": "EnergyUsageMeter",
+          "evaluateAction": "EVAL",
+          "interval": "MONTH",
+          "timeHorizon": "24MONTHS",
+          "entityId": "${id}",
+          "unit": {
+            "id": "kilowatt_hour"
+          }
+        }
+      }
+    }
+  }

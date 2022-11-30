@@ -16,7 +16,7 @@
           "title": "Apartment"
         },
         {
-          "id": "lightbulbEnergy.HomeBuildingLayout",
+          "id": "lightbulbEnergy.HomeBuildingLayoutBase",
           "title": "Building"
         }
       ]

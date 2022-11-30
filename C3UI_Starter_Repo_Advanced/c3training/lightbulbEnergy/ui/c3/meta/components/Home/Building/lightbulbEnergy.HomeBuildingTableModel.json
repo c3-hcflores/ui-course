@@ -1,0 +1,33 @@
+{
+    "type": "UiSdlConnected<UiSdlDataGrid>",
+    "component": {
+      "paginationConfig": {
+        "pageSize": 10,
+        "pagination": true
+      },
+    "reorderableColumns": true,
+      "dataSpec": {
+        "dataType": {
+          "typeName": "Apartment"
+        },
+        "contextVars": {
+          "apartments.building.id": {
+            "type": "UiSdlApplicationStateValueParam",
+            "id": "lightbulbEnergy.UiSdlApplicationStateLBE",
+            "path": "buildingIdRecord"
+          }
+        },
+        "columnFields": [
+        {
+            "fieldName": "id",
+            "label": "Apartment Id",
+            "searchable": false,
+            "redirectLink":{
+              "internal":true,
+              "href": "/meter/{{smartMeterElectric.id}}"
+            }
+        }
+        ]
+      }
+    }
+}

@@ -18,4 +18,12 @@ type UiSdlApplicationStateLBE mixes UiSdlApplicationState {
    @uiSdlActionCreator(actionType='APPLICATION_ID_RECORD_STORE')
    @typeScript(env="client")
    apartmentIdRecordAction: function(id: string, obj: json): UiSdlReduxAction
+
+   @typeScript(env="client")
+   @uiSdlReducer(actionType='BUILDING_ID_RECORD_STORE')
+   buildingIdStoreReducer: private inline function(state: !UiSdlReduxState, action: UiSdlReduxAction): UiSdlReduxState
+
+   @uiSdlActionCreator(actionType='BUILDING_ID_RECORD_STORE')
+   @typeScript(env="client")
+   buildingIdRecordAction: function(id: string, obj: json): UiSdlReduxAction
 }

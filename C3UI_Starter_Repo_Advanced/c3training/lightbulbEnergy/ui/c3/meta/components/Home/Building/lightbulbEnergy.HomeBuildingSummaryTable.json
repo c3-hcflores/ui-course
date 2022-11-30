@@ -1,7 +1,7 @@
 {
   "type": "UiSdlConnected<UiSdlDataGrid>",
   "component": {
-  "detailComponentId":"lightbulbEnergy.HomeCityMetricContainer",
+  "detailComponentId":"lightbulbEnergy.HomeBuildingMetricContainer",
   "paginationConfig": {
     "pageSize": 10,
     "pagination": true
@@ -10,18 +10,44 @@
   "filterBar": false,
   "dataSpec": {
     "dataType": {
-      "typeName": "City"
+      "typeName": "Building"
     },
     "columnFields": [
       {
-        "fieldName": "name",
-        "label": "City"
+        "fieldName": "id",
+        "label": "Building",
+        "searchable": "true",
+        "redirectLink":{
+          "internal":true,
+          "href": "/building/{{building.id}}"
+        }
       },
       {
-        "fieldName": "id",
-        "label": "Abbreviation"
+        "fieldName": "city.id",
+        "label": "City"
       }
       ]
+    },
+    "rowActions": [
+        {
+            "type":"UiSdlViewSDLGridRowAction",
+            "name":"All apartments from a building",
+            "actionSuffix":"POPUP",
+            "iconSuffix":"grid-layout"
+        }
+    ]
+  }, "effectTriggers": [
+    {
+        "trigger":"lightbulbEnergy.HomeBuildingSummaryTable.ROW_ACTION_CLICK_POPUP",
+        "effectType":"UiSdlEpicShowUiSdlModal",
+        "payload": {
+            "modal":"lightbulbEnergy.HomeBuildingModal",
+            "applicationStateForPayload": {
+                "id":"lightbulbEnergy.UiSdlApplicationStateLBE",
+                "trigger":"lightbulbEnergy.UiSdlApplicationStateLBE.BUILDING_ID_RECORD_STORE"
+            }
+        },
+        "payloadStrategy":"MERGE"
     }
-  }
+  ]
 }

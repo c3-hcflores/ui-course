@@ -1,0 +1,15 @@
+{
+  "type": "UiSdlConnected<UiSdlContainer>",
+  "component": {
+    "title": "Building Summary Metrics",
+    "orientation": "VERTICAL",
+    "children": [
+      {
+        "id": "lightbulbEnergy.HomeApartmentMetricMeter"
+      },
+      {
+        "id": "lightbulbEnergy.HomeApartmentMetricBulbs"
+      }
+    ]
+  }
+}

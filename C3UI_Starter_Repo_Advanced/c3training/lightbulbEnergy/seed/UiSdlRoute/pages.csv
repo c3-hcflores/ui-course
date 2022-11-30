@@ -3,4 +3,5 @@ lightbulbEnergy,Home,/,/
 lightbulbEnergy,Home,/home,/home
 lightbulbEnergy,Bulbs,/bulbs,/bulbs
 lightbulbEnergy,Bulb,/bulb/{{myid}},/bulb/{{myid}}
+lightbulbEnergy,Building,/building/{{myid}},/building/{{myid}}
 lightbulbEnergy,Meter,/meter/{{myid}},/meter/{{myid}}
