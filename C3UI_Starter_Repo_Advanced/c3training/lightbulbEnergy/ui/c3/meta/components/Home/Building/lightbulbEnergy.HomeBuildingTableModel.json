@@ -11,7 +11,7 @@
           "typeName": "Apartment"
         },
         "contextVars": {
-          "apartments.building.id": {
+          "building.id": {
             "type": "UiSdlApplicationStateValueParam",
             "id": "lightbulbEnergy.UiSdlApplicationStateLBE",
             "path": "buildingIdRecord"
@@ -21,11 +21,15 @@
         {
             "fieldName": "id",
             "label": "Apartment Id",
-            "searchable": false,
+            "searchable": false
+        }, {
+          "fieldName": "smartMeterElectric.id",
+          "label": "Smart Meter ID",
+          "searchable": false,  
             "redirectLink":{
-              "internal":true,
-              "href": "/meter/{{smartMeterElectric.id}}"
-            }
+            "internal": true,
+            "href": "/meter/{{smartMeterElectric.id}}"
+          }
         }
         ]
       }

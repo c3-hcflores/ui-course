@@ -1,0 +1,45 @@
+{
+  "type": "UiSdlConnected<UiSdlDataGrid>",
+  "component": {
+    "paginationConfig": {
+      "pageSize": 5,
+      "pagination": true
+    },
+    "reorderableColumns": true,
+    "filterBar": false,
+    "dataSpec": {
+      "dataType": {
+        "typeName": "PowerGridStatusSet"
+      },
+      "contextVars": {
+        "parent.id": {
+          "type": "UiSdlPageParam",
+          "path":"myid"
+        }
+      },
+      "columnFields": [
+        {
+          "fieldName": "timestamp",
+          "label": "timestamp",
+          "sortable": true,
+          "defaultSortField": {
+            "sortOrder": "descending"
+          }
+        }, {
+          "fieldName": "id",
+          "label": "id"
+        }
+      ]
+    }
+  },
+  "effectTriggers": [
+    {
+      "trigger":"lightbulbEnergy.BuildingPowerGridStatusSetTable.ROW_CLICK",
+      "effectType": "UiSdlEpicUpdateChartUsingPowerGridStatus",
+      "payload": {
+        "chart": "lightbulbEnergy.BuildingChart"
+      },
+      "payloadStrategy":"MERGE"
+    }
+  ]
+}

@@ -19,7 +19,7 @@
         "searchable": "true",
         "redirectLink":{
           "internal":true,
-          "href": "/building/{{building.id}}"
+          "href": "/building/{{id}}"
         }
       },
       {

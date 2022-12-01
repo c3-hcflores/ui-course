@@ -1,0 +1,51 @@
+{
+    "type": "UiSdlConnected<UiSdlTimeseriesLineBarChart>",
+    "component": {
+      "header": {
+        "title": "Energy usage meter from building"
+      },
+      "legend": {
+        "legendPosition":"BELOW_CHART"
+      },
+      "zoomEnabled": true,
+      "dataZoom": true,
+      "dataSelection": true,
+      "xAxis": {
+        "name": "",
+        "interval": "DAY",
+        "startDate": "LAST_MONTH"
+      },
+      "yAxis": {
+        "name": "EnergyUsageMeter",
+        "units": true
+      },
+      "dataSpec": {
+        "dataType": {
+          "typeName": "SmartMeterElectric"
+        },
+        "contextVars": {
+          "id": {
+            "type": "UiSdlPageParam",
+            "path":"myid"
+          }
+        },
+        "yAxisFields": [
+          {
+            "visualizationType": {
+              "type": "UiSdlLineBarChartLineVisualization",
+              "lineStyle": "Solid",
+              "itemStyle": "Circle"
+            },
+            "entityId": "${id}",
+            "metricName": "EnergyUsageMeter",
+            "bindings": {
+              "value": {
+                "origin": 0,
+                "bound": 100
+              }
+            }
+          }
+        ]
+      }
+    }
+  }

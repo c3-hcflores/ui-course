@@ -1,0 +1,18 @@
+{
+    "type": "UiSdlConnected<UiSdlLayoutSidePanel>",
+    "applicationStateRef": {
+        "id":"lightbulbEnergy.UiSdlApplicationStateLBE"
+    },
+    "component": {
+        "children": [
+            {
+                "id": "lightbulbEnergy.HomeBuildingSummaryTable"
+            },
+            {
+                "id": "lightbulbEnergy.HomeBuildingModal"
+            }
+        ],
+        "leftSidePanel": null,
+        "rightSidePanel": null
+    }
+}  

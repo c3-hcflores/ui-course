@@ -1,0 +1,12 @@
+/*
+* UiSdlEpicUpdateChartUsingPowerGridStatus.c3typ
+* Epic to pass start and end times 
+* to a chart and chart filter
+*/
+
+@typeScript
+type UiSdlEpicUpdateChartUsingPowerGridStatus extends UiSdlEpic {
+    // Override the epic method
+    @typeScript(env='client')
+    epic: ~
+}

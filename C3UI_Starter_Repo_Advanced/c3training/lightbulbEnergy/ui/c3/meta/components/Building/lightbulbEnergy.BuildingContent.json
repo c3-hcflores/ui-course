@@ -1,0 +1,18 @@
+{
+    "type": "UiSdlConnected<UiSdlLayoutSidePanel>",
+    "applicationStateRef": {
+        "id":"lightbulbEnergy.UiSdlApplicationStateLBE"
+    },
+    "component": {
+        "children": [
+            {
+                "id": "lightbulbEnergy.BuildingPowerGridStatusSetTable"
+            },
+            {
+                "id": "lightbulbEnergy.BuildingChart"
+            }
+        ],
+        "leftSidePanel": null,
+        "rightSidePanel": null
+    }
+}
