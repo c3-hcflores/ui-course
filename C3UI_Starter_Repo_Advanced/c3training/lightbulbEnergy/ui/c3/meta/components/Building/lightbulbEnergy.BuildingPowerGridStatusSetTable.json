@@ -19,15 +19,19 @@
       },
       "columnFields": [
         {
+          "fieldName": "id",
+          "label": "Status ID"
+        },
+        {
           "fieldName": "timestamp",
-          "label": "timestamp",
+          "label": "Timestamp",
           "sortable": true,
           "defaultSortField": {
             "sortOrder": "descending"
           }
         }, {
-          "fieldName": "id",
-          "label": "id"
+          "fieldName": "value",
+          "label": "Status Value"
         }
       ]
     }

@@ -6,6 +6,9 @@
     "component": {
         "children": [
             {
+                "id": "lightbulbEnergy.HomeBuildingMap"
+            },
+            {
                 "id": "lightbulbEnergy.HomeBuildingSummaryTable"
             },
             {

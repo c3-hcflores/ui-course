@@ -16,12 +16,12 @@
         "startDate": "LAST_MONTH"
       },
       "yAxis": {
-        "name": "EnergyUsageMeter",
+        "name": "kwatts",
         "units": true
       },
       "dataSpec": {
         "dataType": {
-          "typeName": "SmartMeterElectric"
+          "typeName": "Building"
         },
         "contextVars": {
           "id": {

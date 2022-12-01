@@ -6,14 +6,14 @@ import {updateDisplayDateAction,updateDataFilterAction} from '@c3/ui/UiSdlTimese
 // Overrides the epic method
 export function epic(actionStream, _stateStream) {
   return actionStream.pipe(
-    mergeMap(function (action) {
-      const payload = action.payload;
+    mergeMap(function ({payload: {chart, dataItem: { obj }}}) {
+      
       // Change datetime by a specified number of days
-      var dateSevenDaysBefore = DateTime(payload.dataItem.obj.start).plusDays(-7).toString();  
-      var dateSevenDaysBefore = DateTime(payload.dataItem.obj.start).plusDays(7).toString();  
+      var dateSevenDaysBefore = DateTime(obj.timestamp).plusDays(-7).toString();  
+      var dateSevenDaysBefore = DateTime(obj.timestamp).plusDays(7).toString();  
       return concat(
-            of(updateDisplayDateAction(payload.chart, dateSevenDaysBefore, dateSevenDaysBefore, 'HOUR')),
-            of(updateDataFilterAction(payload.chart, dateSevenDaysBefore, dateSevenDaysBefore, 'HOUR')));
+            of(updateDisplayDateAction(chart, dateSevenDaysBefore, dateSevenDaysBefore, 'DAY')),
+            of(updateDataFilterAction(chart, dateSevenDaysBefore, dateSevenDaysBefore, 'DAY')));
       }
     )
   )
